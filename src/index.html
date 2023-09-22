@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl" class="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <title>slang | landing page with tailwindcss</title>
+    <!-- CDN font-awesome/6.1.1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- main style -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="bg-purple-50 font-vazirmatn dark:bg-[#222b40] dark:text-slate-100">
+    <!-- Header & Navbar  -->
+    <header class="">
+      <!-- Navbar -->
+      <nav id="Navbar" class="border-purple-200 border-b py-4 dark:border-gray-700 transition duration-700 ease-in-out">
+        <div class="max-w-screen-xl flex flex-row-reverse flex-wrap items-center justify-between mx-auto p-4">
+          
+          <div class="flex flex-row-reverse md:flex-row">
+            <a href="#" class="flex items-center md:order-1">
+              <span class="self-center text-3xl font-extrabold whitespace-nowrap font-lalezar hover:text-indigo-900 tracking-wider">
+                slang
+              </span>
+              <img src="./images/logo.png" class="h-8 mr-2" alt="Flowbite Logo" />
+            </a>
+            <button id="theme-toggle" type="button" class="mx-4 text-gray-500 hover:bg-purple-100 dark:text-yellow-200 dark:hover:bg-gray-700  focus:outline-none rounded-lg text-lg p-2.5">
+              <svg id="theme-toggle-dark-icon" class="hidden w-h-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+              <svg id="theme-toggle-light-icon" class="hidden w-h-7 h-7" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            </button>
+          </div>
+
+          <div>
+            <button
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-[20px] order-[-1] text-purple-600 rounded-lg md:hidden focus:outline-none dark:text-slate-100 dark:hover:bg-gray-700"
+          >
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto">
+            <ul
+              class="relative flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:mt-0 md:border-0"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block mx-3 text-xl text-gray-900 hover:text-indigo-900 rounded md:hover:bg-transparent md:border-0 md:p-0 dark:text-slate-200 dark:hover:text-slate-50"
+                  >خانه</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block mx-3 text-xl text-gray-900 hover:text-indigo-900 rounded md:hover:bg-transparent md:border-0 md:p-0 dark:text-slate-200 dark:hover:text-slate-50"
+                  >درباره ما</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block mx-3 text-xl text-gray-900 hover:text-indigo-900 rounded md:hover:bg-transparent md:border-0 md:p-0 dark:text-slate-200 dark:hover:text-slate-50"
+                  >پروژه</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block mx-3 text-xl text-gray-900 hover:text-indigo-900 rounded md:hover:bg-transparent md:border-0 md:p-0 dark:text-slate-200 dark:hover:text-slate-50"
+                  >وبلاگ</a
+                >
+              </li>
+
+              <li>
+                <button
+                data-dropdown-toggle="dropdown"
+                  class="flex items-center justify-between w-full mx-3 text-xl text-gray-900 hover:text-indigo-900 rounded md:hover:bg-transparent md:border-0 md:p-0 md:w-auto dark:text-slate-200 dark:hover:text-slate-50"
+                >
+                  صفحات
+                  <svg
+                    class="w-2.5 h-2.5 mr-2.5"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="m1 1 4 4 4-4"
+                    />
+                  </svg>
+                </button>
+                <div
+                  class="z-10 absolute hidden font-normal md:w-52 divide-y divide-gray-100 rounded-lg shadow-lg bg-purple-50 w-44"
+                >
+                  <ul
+                    class="py-2 text-[20px] text-gray-700"
+                    aria-labelledby="dropdownLargeButton"
+                  >
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-purple-100"
+                        >زیر منو 1</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-purple-100"
+                        >زیر منو 2</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#" class="block px-4 py-2 hover:bg-purple-100"
+                        >زیر منو 3</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block mx-3 text-xl text-gray-900 hover:text-indigo-900 rounded md:hover:bg-transparent md:border-0 md:p-0 dark:text-slate-200 dark:hover:text-slate-50"
+                  >ارتباط باما</a
+                >
+              </li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Header -->
+      <section class="pt-16">
+        <div class="flex flex-col md:flex-row items-center justify-evenly">
+          <div class="w-10/12 md:w-5/12 md:text-right">
+            <h1
+              class="text-2xl text-center md:text-3xl lg:text-4xl font-lalezar leading-normal"
+            >
+              ما راه حل های نرم افزاری تجزیه و تحلیل پیشرفته هستیم
+            </h1>
+            <p class="mt-12 text-lg">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده
+            </p>
+            <div
+              class="text-sm text-slate-600 lg:text-lg mt-12 bg-slate-50 px-4 py-2 rounded flex items-center border border-indigo-700"
+            >
+              <input
+                class="outline-none grow w-8/12 focus-visible:outline-none bg-slate-50 text-sm md:text-lg"
+                type="email"
+                placeholder="آدرس ایمیل شما"
+              />
+              <button
+                class="text-slate-100 bg-indigo-700 hover:bg-indigo-800 rounded py-3 px-4 flex items-center transition duration-300 ease-in-out"
+                type="button"
+              >
+                <span class="hidden sm:inline-block"> دوره آزمایشی </span>
+                <i class="fas fa-arrow-left sm:mr-2 pt-1"></i>
+              </button>
+            </div>
+            <div class="flex flex-wrap mt-12">
+              <div class="flex items-center ml-6 my-2">
+                <input
+                  type="radio"
+                  name="update"
+                  id="weeklyUpdate"
+                  class="w-6 h-6 text-Purple-600 bg-gray-100 border-gray-300 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label
+                  for="weeklyUpdate"
+                  class="ml-2 text-gray-900 dark:text-gray-300 mr-3 text-lg"
+                >
+                  آپدیت هفتگی
+                </label>
+              </div>
+              <div class="flex items-center my-2">
+                <input
+                  type="radio"
+                  name="update"
+                  id="monthlyUpdate"
+                  class="w-6 h-6 text-Purple-600 bg-gray-100 border-gray-300 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label
+                  for="monthlyUpdate"
+                  class="ml-2 text-gray-900 dark:text-gray-300 mr-3 text-lg"
+                >
+                  آپدیت ماهیانه
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="w-10/12 md:w-5/12 mt-8 md:mt-0">
+            <img src="./images/hero-three.jpg" alt="hero three iamge" />
+          </div>
+        </div>
+      </section>
+    </header>
+    <!-- solutions section -->
+    <section
+      class="bg-indigo-600 dark:bg-[#141B2D] bg-hero-pattern bg-center bg-no-repeat bg-cover mt-12 py-8"
+    >
+      <div class="py-12 text-center text-slate-100 px-4">
+        <span class="text-lg font-bold px-3 py-1 rounded bg-indigo-700 dark:bg-[#323a4d]">
+          راه حل های ویژه ما
+        </span>
+        <h1
+          class="mt-8 text-2xl font-lalezar sm:text-3xl md:text-5xl w-full md:w-6/12 xl:4/12 m-auto"
+        >
+          ما نرم افزار شما را به روشهای هوشمند سفارشی می کنیم
+        </h1>
+        <!-- cards -->
+        <div class="mt-16 flex flex-wrap items-center justify-evenly">
+          <div class="block max-w-sm p-6 rounded-lg mb-4 mx-2">
+            <div
+              class="text-center border border-gray-400 w-20 h-20 m-auto rounded relative"
+            >
+              <div
+                class="bg-white text-indigo-700 rounded w-20 h-20 flex items-center justify-center absolute -top-3 -right-3"
+              >
+                <i class="fa-regular fa-compass text-4xl"></i>
+              </div>
+            </div>
+            <h4 class="mt-6 text-3xl font-extrabold">مدل نرم افزاری</h4>
+            <p class="mt-4 mb-6 text-lg">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و
+            </p>
+            <a
+              href="#"
+              class="text-lg flex items-center justify-center hover:underline"
+            >
+              <span> بیشتر بخوانید </span>
+              <i class="fa fa-arrow-left pr-2"></i>
+            </a>
+          </div>
+
+          <div class="block max-w-sm p-6 rounded-lg mb-4 mx-2">
+            <div
+              class="text-center border border-gray-400 w-20 h-20 m-auto rounded relative"
+            >
+              <div
+                class="bg-white text-indigo-700 rounded w-20 h-20 flex items-center justify-center absolute -top-3 -right-3"
+              >
+                <i class="fa-regular fa-map text-4xl"></i>
+              </div>
+            </div>
+            <h4 class="mt-6 text-3xl font-extrabold">شبکه سیمی</h4>
+            <p class="mt-4 mb-6 text-lg">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و
+            </p>
+            <a
+              href="#"
+              class="text-lg flex items-center justify-center hover:underline"
+            >
+              <span> بیشتر بخوانید </span>
+              <i class="fa fa-arrow-left pr-2"></i>
+            </a>
+          </div>
+
+          <div class="block max-w-sm p-6 rounded-lg mb-4 mx-2">
+            <div
+              class="text-center border border-gray-400 w-20 h-20 m-auto rounded relative"
+            >
+              <div
+                class="bg-white text-indigo-700 rounded w-20 h-20 flex items-center justify-center absolute -top-3 -right-3"
+              >
+                <i class="fa-solid fa-shield-halved text-4xl"></i>
+              </div>
+            </div>
+            <h4 class="mt-6 text-3xl font-extrabold">تثبیت نهایی</h4>
+            <p class="mt-4 mb-6 text-lg">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+              استفاده از طراحان گرافیک است، چاپگرها و
+            </p>
+            <a
+              href="#"
+              class="text-lg flex items-center justify-center hover:underline"
+            >
+              <span>بیشتر بخوانید </span>
+              <i class="fa fa-arrow-left pr-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- About -->
+    <section class="pt-20">
+      <div class="flex flex-col md:flex-row items-center justify-evenly">
+        <div class="w-10/12 md:w-5/12 md:text-right">
+          <span
+            class="text-lg font-bold px-3 py-1 rounded bg-indigo-700 dark:bg-[#323a4d] text-slate-100"
+            >راه حل های ویژه ما</span
+          >
+          <h3
+            class="text-4xl md:text-4xl lg:text-5xl text-right mt-6 lg:leading-normal font-lalezar"
+          >
+            برای ایجاد صفحات فرود شگفت انگیز از Landingly استفاده کنید
+          </h3>
+          <p class="mt-8 text-lg">
+            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+            استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در
+            ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز،
+            و
+          </p>
+          <div class="flex flex-wrap my-8">
+            <div class="ml-6 mt-4">
+              <span
+                class="bg-indigo-700 inline-flex items-center justify-center w-7 h-7 rounded-full"
+                ><i class="fa-solid fa-check text-slate-100 text-lg"></i
+              ></span>
+              <span class="mr-1 font-lalezar text-lg sm:text-2xl"
+                >نرم افزاری</span
+              >
+            </div>
+            <div class="mt-4">
+              <span
+                class="bg-indigo-700 inline-flex items-center justify-center w-7 h-7 rounded-full"
+                ><i class="fa-solid fa-check text-slate-100 text-lg"></i
+              ></span>
+              <span class="mr-1 font-lalezar text-lg sm:text-2xl"
+                >وب سایت مشتریان</span
+              >
+            </div>
+          </div>
+          <button
+            class="bg-white hover:bg-indigo-700 text-indigo-700 hover:text-slate-100 font-bold border-2 rounded border-indigo-700 py-3 px-4 flex items-center transition duration-300 ease-in-out"
+            type="button"
+          >
+            <span> شروع کنید </span>
+            <i class="fas fa-arrow-left mr-2 pt-1"></i>
+          </button>
+        </div>
+
+        <div class="w-10/12 md:w-5/12 mt-8 md:mt-0">
+          <img src="./images/about-two.png" alt="hero three iamge" />
+        </div>
+      </div>
+    </section>
+    <!-- Borwser Support -->
+    <section class="pt-20 mt-8">
+      <div
+        class="flex flex-col-reverse md:flex-row items-center justify-evenly"
+      >
+        <div class="w-10/12 md:w-5/12 mt-8 md:mt-0">
+          <img src="./images/borwser-support.jpg" alt="borwser support iamge" />
+        </div>
+        <div class="w-10/12 md:w-5/12 md:text-right">
+          <span
+            class="text-lg font-bold px-3 py-1 rounded bg-indigo-700 dark:bg-[#323a4d] text-slate-100"
+            >پشتیبانی مرورگر</span
+          >
+          <h3
+            class="text-4xl md:text-4xl text-right mt-6 lg:leading-normal font-lalezar"
+          >
+            ما در پشتیبانی مرورگر وب مورد علاقه شما ایجاد می کنیم
+          </h3>
+          <div class="flex flex-wrap my-8">
+            <div>
+              <div
+                class="bg-indigo-700 inline-flex items-center justify-center w-7 h-7 rounded-full"
+              >
+                <i class="fa-solid fa-check text-slate-100 text-lg"></i>
+              </div>
+              <div class="mt-4 font-lalezar text-lg sm:text-2xl">
+                پیگیری مشتریان
+              </div>
+              <p class="mt-4">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است، و برای شرایط
+              </p>
+            </div>
+            <div class="mt-6">
+              <div
+                class="bg-yellow-500 inline-flex items-center justify-center w-7 h-7 rounded-full"
+              >
+                <i class="fa-solid fa-check text-slate-100 text-lg"></i>
+              </div>
+              <div class="mt-4 font-lalezar text-lg sm:text-2xl">
+                درک خیلی از عملکرد بهتر
+              </div>
+              <p class="mt-4">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است، و برای شرایط
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- News Letter -->
+    <section class="translate-y-[160px]">
+      <div class="w-10/12 m-auto">
+        <div
+          class="flex flex-col-reverse lg:flex-row bg-[#222b40] dark:bg-[#172033] py-8 px-4 relative rounded"
+        >
+          <div class="w-12/12 md:8/12 lg:w-6/12 px-8 mt-8">
+            <span
+              class="text-lg font-bold px-3 py-1 rounded bg-[#323a4d] text-slate-100"
+              >خبرنامه ما</span
+            >
+            <h3 class="text-4xl text-right text-slate-100 mt-6 font-lalezar">
+              عضویت در خبرنامه
+            </h3>
+            <div
+              class="mt-12 bg-white px-4 py-2 rounded flex items-center border border-indigo-700"
+            >
+              <input
+                class="outline-none grow w-8/12 focus-visible:outline-none"
+                type="email"
+                placeholder="آدرس ایمیل شما"
+              />
+              <button
+                class="text-slate-100 bg-indigo-700 hover:bg-indigo-800 rounded py-3 px-4 flex items-center transition duration-300 ease-in-out"
+                type="button"
+              >
+                <span> دوره آزمایشی </span>
+                <i class="fas fa-angle-left mr-2 pt-1"></i>
+              </button>
+            </div>
+            <div class="flex flex-wrap mt-8">
+              <div class="flex items-center ml-6 my-2">
+                <input
+                  type="radio"
+                  name="update"
+                  id="weeklyUpdate"
+                  class="w-6 h-6 text-Purple-600 bg-gray-100 border-gray-300 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label
+                  for="weeklyUpdate"
+                  class="ml-2 text-slate-100 mr-3 text-lg"
+                >
+                  آپدیت هفتگی
+                </label>
+              </div>
+              <div class="flex items-center my-2">
+                <input
+                  type="radio"
+                  name="update"
+                  id="monthlyUpdate"
+                  class="w-6 h-6 text-Purple-600 bg-gray-100 border-gray-300 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600"
+                />
+                <label
+                  for="monthlyUpdate"
+                  class="ml-2 text-slate-100 mr-3 text-lg"
+                >
+                  آپدیت ماهیانه
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="w-12/12 md:4/12 lg:w-6/12 px-8">
+            <img
+              class="max-w-[70%] m-auto scale-150"
+              src="./images/newsletter-two.png"
+              alt="News letter image"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- services -->
+    <section class="bg-indigo-50 dark:bg-[#131b2c] pt-48">
+      <div class="pt-24 pb-16 text-center">
+        <span
+          class="text-lg font-bold px-3 py-1 rounded bg-indigo-700 dark:bg-[#323a4d] text-slate-100"
+        >
+          راه حل های ویژه ما
+        </span>
+        <h1
+          class="mt-8 text-2xl font-lalezar sm:text-3xl md:text-5xl w-full md:w-6/12 xl:4/12 m-auto"
+        >
+          ما نرم افزار شما را به روشهای هوشمند سفارشی می کنیم
+        </h1>
+        <!-- Cards -->
+        <div class="pt-10">
+          <div class="flex flex-wrap items-center justify-evenly">
+            <div
+              class="max-w-sm p-6 bg-slate-100 dark:bg-[#222b40] border border-gray-200 dark:border-[#333b40] rounded-lg shadow dark:shadow-indigo-700 hover:shadow-md m-4 flex"
+            >
+              <div class="text-indigo-700 text-6xl">
+                <i class="fa-regular fa-file-lines"></i>
+              </div>
+              <div class="text-right pr-4">
+                <h4
+                  class="text-2xl sm:text-3xl font-lalezar hover:text-indigo-700 cursor-pointer"
+                >
+                  بهینه سازی عالی
+                </h4>
+                <p class="text-justify text-lg pt-4">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و
+                  مجله
+                </p>
+              </div>
+            </div>
+            <div
+              class="max-w-sm p-6 bg-slate-100 dark:bg-[#222b40] border border-gray-200 dark:border-[#333b40] rounded-lg shadow dark:shadow-indigo-700 hover:shadow-md m-4 flex"
+            >
+              <div class="text-indigo-700 text-6xl">
+                <i class="fa-regular fa-window-restore"></i>
+              </div>
+              <div class="text-right pr-4">
+                <h4
+                  class="text-2xl sm:text-3xl font-lalezar hover:text-indigo-700 cursor-pointer"
+                >
+                  طراحی واکنشگرا
+                </h4>
+                <p class="text-justify text-lg pt-4">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و
+                  مجله
+                </p>
+              </div>
+            </div>
+            <div
+              class="max-w-sm p-6 bg-slate-100 dark:bg-[#222b40] border border-gray-200 dark:border-[#333b40] rounded-lg shadow dark:shadow-indigo-700 hover:shadow-md m-4 flex"
+            >
+              <div class="text-indigo-700 text-6xl">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <div class="text-right pr-4">
+                <h4
+                  class="text-2xl sm:text-3xl font-lalezar hover:text-indigo-700 cursor-pointer"
+                >
+                  امنیت بالا
+                </h4>
+                <p class="text-justify text-lg pt-4">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و
+                  مجله
+                </p>
+              </div>
+            </div>
+            <div
+              class="max-w-sm p-6 bg-slate-100 dark:bg-[#222b40] border border-gray-200 dark:border-[#333b40] rounded-lg shadow dark:shadow-indigo-700 hover:shadow-md m-4 flex"
+            >
+              <div class="text-indigo-700 text-6xl">
+                <i class="fa-regular fa-lightbulb"></i>
+              </div>
+              <div class="text-right pr-4">
+                <h4
+                  class="text-2xl sm:text-3xl font-lalezar hover:text-indigo-700 cursor-pointer"
+                >
+                  طراحی خلاقانه
+                </h4>
+                <p class="text-justify text-lg pt-4">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و
+                  مجله
+                </p>
+              </div>
+            </div>
+            <div
+              class="max-w-sm p-6 bg-slate-100 dark:bg-[#222b40] border border-gray-200 dark:border-[#333b40] rounded-lg shadow dark:shadow-indigo-700 hover:shadow-md m-4 flex"
+            >
+              <div class="text-indigo-700 text-6xl">
+                <i class="fa-solid fa-code"></i>
+              </div>
+              <div class="text-right pr-4">
+                <h4
+                  class="text-2xl sm:text-3xl font-lalezar hover:text-indigo-700 cursor-pointer"
+                >
+                  توسعه اصولی
+                </h4>
+                <p class="text-justify text-lg pt-4">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه
+                </p>
+              </div>
+            </div>
+            <div
+              class="max-w-sm p-6 bg-slate-100 dark:bg-[#222b40] border border-gray-200 dark:border-[#333b40] rounded-lg shadow dark:shadow-indigo-700 hover:shadow-md m-4 flex"
+            >
+              <div class="text-indigo-700 text-6xl">
+                <i class="fa-regular fa-bookmark"></i>
+              </div>
+              <div class="text-right pr-4">
+                <h4
+                  class="text-2xl sm:text-3xl font-lalezar hover:text-indigo-700 cursor-pointer"
+                >
+                  آنالیز حرفه ای
+                </h4>
+                <p class="text-justify text-lg pt-4">
+                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                  با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و
+                  مجله
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- dashboard -->
+    <section class="py-12">
+      <div class="text-center py-8">
+        <span
+          class="text-lg font-bold px-3 py-1 rounded bg-indigo-700 dark:bg-[#323a4d] text-slate-100"
+        >
+          تصویر داشبورد
+        </span>
+        <h1
+          class="mt-8 text-2xl font-lalezar sm:text-3xl md:text-5xl w-full md:w-6/12 xl:4/12 m-auto"
+        >
+          بیایید تصاویر طراحی UI نرم افزار عالی را ببینیم
+        </h1>
+      </div>
+      <div class="pt-12 sm:w-11/12 md:w-8/12 m-auto">
+        <div
+          id="animation-carousel"
+          class="relative w-full"
+          data-carousel="static"
+        >
+          <!-- Carousel wrapper -->
+          <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+            <!-- Item 1 -->
+            <div class="hidden duration-200 ease-linear" data-carousel-item>
+              <img
+                src="./images/dashboard-screenshot1.jpg"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-200 ease-linear" data-carousel-item>
+              <img
+                src="./images/dashboard-screenshot2.jpg"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+            </div>
+            <!-- Item 3 -->
+            <div class="duration-200 ease-linear" data-carousel-item="active">
+              <img
+                src="./images/dashboard-screenshot3.jpg"
+                class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                alt="..."
+              />
+            </div>
+            <!-- Item 4 -->
+          </div>
+          <!-- Slider controls -->
+          <button
+            type="button"
+            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev
+          >
+            <span
+              class="inline-flex items-center justify-center w-10 h-10 rounded bg-black hover:bg-indigo-700"
+            >
+              <svg
+                class="w-4 h-4 text-slate-100"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 1 1 5l4 4"
+                />
+              </svg>
+              <span class="sr-only">Previous</span>
+            </span>
+          </button>
+          <button
+            type="button"
+            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next
+          >
+            <span
+              class="inline-flex items-center justify-center w-10 h-10 rounded bg-black hover:bg-indigo-700"
+            >
+              <svg
+                class="w-4 h-4 text-slate-100"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 9 4-4-4-4"
+                />
+              </svg>
+              <span class="sr-only">Next</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- feedback -->
+    <section class="bg-indigo-700 bg-feedback py-12 dark:bg-[#141B2D]">
+      <div class="text-center">
+        <span
+          class="text-lg font-bold px-3 py-1 rounded bg-indigo-500 dark:bg-[#323a4d] text-slate-100"
+        >
+          بازخورد مشتریان
+        </span>
+        <h1
+          class="mt-8 text-2xl text-slate-100 font-lalezar sm:text-3xl md:text-5xl w-full md:w-6/12 xl:4/12 m-auto"
+        >
+          آنچه مشتریان ما در مورد ما می گویند
+        </h1>
+      </div>
+
+      <!-- cards -->
+      <div class="py-10 px-8">
+        <div
+          class="flex flex-nowrap overflow-x-auto items-center justify-evenly"
+        >
+          <div
+            class="w-80 min-w-[340px] p-6 bg-white border border-gray-200 dark:border-indigo-900 rounded-lg shadow hover:shadow-lg m-4 dark:bg-[#222b40]"
+          >
+            <img
+              class="w-[160px] h-auto"
+              src="./images/client-logo1.png"
+              alt="logo"
+            />
+            <p class="mt-8 text-xl line-clamp-6">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+            </p>
+            <div class="flex items-center mt-6">
+              <div
+                class="w-20 h-20 rounded-full bg-indigo-700 text-5xl text-slate-100 text-center leading-loose"
+              >
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+              <div class="pr-4">
+                <p class="font-lalezar text-2xl">محسن محسنی</p>
+                <p class="text-gray-600 text-lg">کاربر سایت</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-80 min-w-[340px] p-6 bg-white border border-gray-200 dark:border-indigo-900 rounded-lg shadow hover:shadow-lg m-4 dark:bg-[#222b40]"
+          >
+            <img
+              class="w-[160px] h-auto"
+              src="./images/client-logo2.png"
+              alt="logo"
+            />
+            <p class="mt-8 text-xl line-clamp-6">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+            </p>
+            <div class="flex items-center mt-6">
+              <div
+                class="w-20 h-20 rounded-full bg-indigo-700 text-5xl text-slate-100 text-center leading-loose"
+              >
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+              <div class="pr-4">
+                <p class="font-lalezar text-2xl">مهران بلوچ</p>
+                <p class="text-gray-600 text-lg">کاربر سایت</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-80 min-w-[340px] p-6 bg-white border border-gray-200 dark:border-indigo-900 rounded-lg shadow hover:shadow-lg m-4 dark:bg-[#222b40]"
+          >
+            <img
+              class="w-[160px] h-auto"
+              src="./images/client-logo3.png"
+              alt="logo"
+            />
+            <p class="mt-8 text-xl line-clamp-6">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+            </p>
+            <div class="flex items-center mt-6">
+              <div
+                class="w-20 h-20 rounded-full bg-indigo-700 text-5xl text-slate-100 text-center leading-loose"
+              >
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+              <div class="pr-4">
+                <p class="font-lalezar text-2xl">ابراهیم ابراهیمی</p>
+                <p class="text-gray-600 text-lg">کاربر سایت</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-80 min-w-[340px] p-6 bg-white border border-gray-200 dark:border-indigo-900 rounded-lg shadow hover:shadow-lg m-4 dark:bg-[#222b40]"
+          >
+            <img
+              class="w-[160px] h-auto"
+              src="./images/client-logo1.png"
+              alt="logo"
+            />
+            <p class="mt-8 text-xl line-clamp-6">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+            </p>
+            <div class="flex items-center mt-6">
+              <div
+                class="w-20 h-20 rounded-full bg-indigo-700 text-5xl text-slate-100 text-center leading-loose"
+              >
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+              <div class="pr-4">
+                <p class="font-lalezar text-2xl">محسن محسنی</p>
+                <p class="text-gray-600 text-lg">کاربر سایت</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-80 min-w-[340px] p-6 bg-white dark:bg-[#222b40] border border-gray-200 dark:border-indigo-900 rounded-lg shadow hover:shadow-lg m-4"
+          >
+            <img
+              class="w-[160px] h-auto"
+              src="./images/client-logo2.png"
+              alt="logo"
+            />
+            <p class="mt-8 text-xl line-clamp-6">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+            </p>
+            <div class="flex items-center mt-6">
+              <div
+                class="w-20 h-20 rounded-full bg-indigo-700 text-5xl text-slate-100 text-center leading-loose"
+              >
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+              <div class="pr-4">
+                <p class="font-lalezar text-2xl">مهران بلوچ</p>
+                <p class="text-gray-600 text-lg">کاربر سایت</p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-80 min-w-[340px] p-6 bg-white dark:bg-[#222b40] border border-gray-200 dark:border-indigo-900 rounded-lg shadow hover:shadow-lg m-4"
+          >
+            <img
+              class="w-[160px] h-auto"
+              src="./images/client-logo3.png"
+              alt="logo"
+            />
+            <p class="mt-8 text-xl line-clamp-6">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+              استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+              در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+              نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+            </p>
+            <div class="flex items-center mt-6">
+              <div
+                class="w-20 h-20 rounded-full bg-indigo-700 text-5xl text-slate-100 text-center leading-loose"
+              >
+                <i class="fa-solid fa-quote-right"></i>
+              </div>
+              <div class="pr-4">
+                <p class="font-lalezar text-2xl">ابراهیم ابراهیمی</p>
+                <p class="text-gray-600 text-lg">کاربر سایت</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- partner -->
+    <section class="py-12 px-4">
+      <div class="flex flex-wrap items-center justify-evenly">
+        <div class="max-w-sm p-2 m-4 flex">
+          <img
+            class="w-[160px] h-auto"
+            src="./images/partner-three1.png"
+            alt="partner logo"
+          />
+        </div>
+        <div class="max-w-sm p-2 m-4 flex">
+          <img
+            class="w-[160px] h-auto"
+            src="./images/partner-three2.png"
+            alt="partner logo"
+          />
+        </div>
+        <div class="max-w-sm p-2 m-4 flex">
+          <img
+            class="w-[160px] h-auto"
+            src="./images/partner-three3.png"
+            alt="partner logo"
+          />
+        </div>
+        <div class="max-w-sm p-2 m-4 flex">
+          <img
+            class="w-[160px] h-auto"
+            src="./images/partner-three4.png"
+            alt="partner logo"
+          />
+        </div>
+        <div class="max-w-sm p-2 m-4 flex">
+          <img
+            class="w-[160px] h-auto"
+            src="./images/partner-three5.png"
+            alt="partner logo"
+          />
+        </div>
+      </div>
+      <div class="px-4 sm:px-8 md:px-16 mt-12 "><hr class="border-t-2 dark:border-[#ffffff36]" /></div>
+    </section>
+    <!-- contact -->
+    <section class="py-12">
+      <div class="text-center">
+        <span
+          class="text-lg font-bold px-3 py-1 rounded bg-indigo-700 dark:bg-[#323a4d] text-slate-100"
+        >
+          <span class="font-bnazanin font-extrabold">7</span> روز آزمایش رایگان
+          دریافت کنید
+        </span>
+        <h1
+          class="mt-8 text-2xl font-lalezar sm:text-3xl md:text-5xl w-full md:w-6/12 xl:4/12 m-auto"
+        >
+          برای دریافت نسخه آزمایشی رایگان
+          <span class="font-bnazanin font-extrabold">7</span> روزه خود با ما
+          تماس بگیرید
+        </h1>
+      </div>
+      <!-- cards -->
+      <div class="flex flex-wrap items-center justify-center py-8">
+        <div
+          class="max-w-sm p-8 bg-violet-100 dark:bg-gray-900 rounded-lg m-4 flex items-center shadow hover:shadow-lg"
+        >
+          <div
+            class="w-16 h-16 border-2 rounded-full bg-indigo-700 text-slate-50 text-2xl flex items-center justify-center"
+          >
+          <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="pr-4">
+            <p class="font-lalezar text-3xl">ایمیل ما</p>
+            <a href="#" class="underline text-xl text-gray-600 dark:text-slate-400">
+              info@slang.com
+            </a>
+          </div>
+        </div>
+        <div
+          class="max-w-sm p-8 bg-violet-100 dark:bg-gray-900 rounded-lg m-4 flex items-center shadow hover:shadow-lg"
+        >
+          <div
+            class="w-16 h-16 border-2 rounded-full bg-indigo-700 text-slate-50 text-2xl flex items-center justify-center"
+          >
+          <i class="fa-solid fa-phone"></i>
+          </div>
+          <div class="pr-4">
+            <p class="font-lalezar text-3xl">شماره تماس</p>
+            <a href="#" class="underline font-bnazanin text-2xl text-gray-600 dark:text-slate-300"
+              >0123456789</a
+            >
+          </div>
+        </div>
+        <div
+          class="max-w-sm p-8 bg-violet-100 dark:bg-gray-900 rounded-lg m-4 flex items-center shadow hover:shadow-lg"
+        >
+          <div
+            class="w-16 h-16 border-2 rounded-full bg-indigo-700 text-slate-50 text-2xl flex items-center justify-center"
+          >
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+          <div class="pr-4">
+            <p class="font-lalezar text-3xl">آدرس</p>
+            <a href="#" class="underline text-xl text-gray-600 dark:text-gray-300"
+              >ایران، تهران، آزادی</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- from & map -->
+      <div class="flex flex-col lg:flex-row justify-center px-4 mt-12">
+        <!-- form -->
+        <div class="sm:w-11/12 md:10/12 lg:6/12 m-auto">
+          <form class="font-lalezar px-2">
+            <div class="grid gap-6 mb-6 md:grid-cols-2">
+              <div>
+                <input
+                  type="text"
+                  class="bg-transparent border-b-2 rounded-none border-gray-300 text-gray-900 text-xl focus:border-indigo-600 focus-within:outline-none  block w-full p-2.5"
+                  placeholder="نام و نام خانوادگی"
+                />
+              </div>
+              <div>
+                <input
+                  type="email"
+                  class="bg-transparent border-b-2 rounded-none border-gray-300 text-gray-900 text-xl focus:border-indigo-600 focus-within:outline-none  block w-full p-2.5"
+                  placeholder="آدرس ایمیل"
+                />
+              </div>
+              <div>
+                <input
+                  type="tel"
+                  class="bg-transparent border-b-2 rounded-none border-gray-300 text-gray-900 text-xl focus:border-indigo-600 focus-within:outline-none  block w-full p-2.5"
+                  placeholder="شماره تماس"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  class="bg-transparent border-b-2 rounded-none border-gray-300 text-gray-900 text-xl focus:border-indigo-600 focus-within:outline-none  block w-full p-2.5"
+                  placeholder="شرکت"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  class="bg-transparent border-b-2 rounded-none border-gray-300 text-gray-900 text-xl focus:border-indigo-600 focus-within:outline-none  block w-full p-2.5"
+                  placeholder="موضوع"
+                />
+              </div>
+              <div>
+                <input
+                  type="url"
+                  class="bg-transparent border-b-2 rounded-none border-gray-300 text-gray-900 text-xl focus:border-indigo-600 focus-within:outline-none block w-full p-2.5"
+                  placeholder="وبسایت"
+                />
+              </div>
+            </div>
+            <div class="mb-8">
+              <textarea
+                rows="4"
+                class="bg-transparent border-b-2 border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 focus-within:outline-none"
+                placeholder="پیام"
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="text-slate-100 bg-indigo-700 hover:bg-indigo-800 rounded py-3 px-4 flex items-center transition duration-300 ease-in-out focus:outline-none focus-within:outline-none mt-8"
+            >
+            <span> آزمایش رایگان دریافت کنید  </span>
+            <i class="fas fa-arrow-left mr-2 pt-1"></i>
+            </button>
+          </form>
+        </div>
+        <!-- map -->
+        <div class="sm:w-10/12 md:8/12 mt-8 md:mt-0 lg:6/12 m-auto">
+         <div class="px-2 pt-8">
+          <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12955.032660509261!2d51.3088182957109!3d35.732165677796786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8dfda4247da4fb%3A0xe3f8f7ca51dec7d9!2sMehran%2C%20Tehran%2C%20Tehran%20Province%2C%20Iran!5e0!3m2!1sen!2s!4v1695043758252!5m2!1sen!2s" 
+          width="100%" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          >
+        </iframe>
+         </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- news & blog -->
+    <section class="bg-indigo-50 dark:bg-[#131b2c] pt-12 pb-24">
+      <div class="flex items-center">
+        <div class="py-16 text-center grow-1">
+          <span class="text-lg font-bold px-3 py-1 rounded bg-indigo-700 dark:bg-[#323a4d] text-slate-100">
+            آخرین اخبار و وبلاگ
+          </span>
+          <h1 class="mt-8 text-2xl font-lalezar sm:text-3xl md:text-5xl w-full md:w-6/12 xl:4/12 m-auto">
+            آخرین اخبار و وبلاگ ما را مشاهده کنید
+          </h1>
+          <button type="submit" class="m-auto text-slate-100 bg-indigo-700 hover:bg-indigo-800 rounded py-3 px-4 flex items-center transition duration-300 ease-in-out focus:outline-none focus-within:outline-none mt-8">
+            <span> اخبار بیشتر را مشاهده کنید </span>
+            <i class="fas fa-arrow-left mr-2 pt-1"></i>
+          </button>
+        </div>
+        <!-- Cards -->
+        <div class="pt-10 grow-4">
+          <div class="flex flex-wrap items-center justify-center">
+
+            <a href="#" class="text-right block w-[340px] max-w-sm p-6 m-4 bg-slate-50 border border-gray-200 dark:border-gray-800 rounded-lg shadow dark:shadow-slate-600 dark:bg-gray-800 dark:text-slate-100">
+              <div class="flex items-center mb-4 text-gray-500">
+                <span >
+                  <i class="far fa-calendar-alt"></i>
+                  <span href="#">25 آبان 1401</span>
+                </span>
+                <span class="pr-4">
+                  <i class="far fa-comments"></i>
+                  <span href="#">نظر (5)</span>
+                </span>
+              </div>  
+              <h5 class="mb-4 text-3xl font-lalezar tracking-tight">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</h5>
+              <p class="text-lg line-clamp-5 mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+              <button href="#" class="text-lg flex items-center justify-center hover:underline mb-4 m-auto">
+                <span> بیشتر بخوانید </span>
+                <i class="fa fa-arrow-left pr-2"></i>
+              </button>
+            </a>
+            <a href="#" class="text-right block w-[340px] max-w-sm p-6 m-4 bg-slate-50 border border-gray-200 dark:border-gray-800 rounded-lg shadow dark:shadow-slate-600 dark:bg-gray-800 dark:text-slate-100">
+              <div class="flex items-center mb-4 text-gray-500">
+                <span >
+                  <i class="far fa-calendar-alt"></i>
+                  <span href="#">25 آبان 1401</span>
+                </span>
+                <span class="pr-4">
+                  <i class="far fa-comments"></i>
+                  <span href="#">نظر (5)</span>
+                </span>
+              </div>  
+              <h5 class="mb-4 text-3xl font-lalezar tracking-tight">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</h5>
+              <p class="text-lg line-clamp-5 mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+              <button href="#" class="text-lg flex items-center justify-center hover:underline mb-4 m-auto">
+                <span> بیشتر بخوانید </span>
+                <i class="fa fa-arrow-left pr-2"></i>
+              </button>
+            </a>
+            <a href="#" class="text-right block w-[340px] max-w-sm p-6 m-4 bg-slate-50 border border-gray-200 dark:border-gray-800 rounded-lg shadow dark:shadow-slate-600 dark:bg-gray-800 dark:text-slate-100">
+              <div class="flex items-center mb-4 text-gray-500">
+                <span >
+                  <i class="far fa-calendar-alt"></i>
+                  <span href="#">25 آبان 1401</span>
+                </span>
+                <span class="pr-4">
+                  <i class="far fa-comments"></i>
+                  <span href="#">نظر (5)</span>
+                </span>
+              </div>  
+              <h5 class="mb-4 text-3xl font-lalezar tracking-tight">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</h5>
+              <p class="text-lg line-clamp-5 mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+              <button href="#" class="text-lg flex items-center justify-center hover:underline mb-4 m-auto">
+                <span> بیشتر بخوانید </span>
+                <i class="fa fa-arrow-left pr-2"></i>
+              </button>
+            </a>
+            <a href="#" class="text-right block w-[340px] max-w-sm p-6 m-4 bg-slate-50 border border-gray-200 dark:border-gray-800 rounded-lg shadow dark:shadow-slate-600 dark:bg-gray-800 dark:text-slate-100">
+              <div class="flex items-center mb-4 text-gray-500">
+                <span >
+                  <i class="far fa-calendar-alt"></i>
+                  <span href="#">25 آبان 1401</span>
+                </span>
+                <span class="pr-4">
+                  <i class="far fa-comments"></i>
+                  <span href="#">نظر (5)</span>
+                </span>
+              </div>  
+              <h5 class="mb-4 text-3xl font-lalezar tracking-tight">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</h5>
+              <p class="text-lg line-clamp-5 mb-4">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.</p>
+              <button href="#" class="text-lg flex items-center justify-center hover:underline mb-4 m-auto">
+                <span> بیشتر بخوانید </span>
+                <i class="fa fa-arrow-left pr-2"></i>
+              </button>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-[#222b40] text-slate-200">
+      <!-- help -->
+      <div class="w-11/12 lg:10/12 bg-indigo-700 dark:bg-[#172033] flex flex-wrap items-center justify-evenly rounded-md py-12 m-auto translate-y-[-80px]">
+        
+        <div class="py-4">
+          <h1 class="text-slate-100 font-lalezar text-3xl">آیا نیاز به کمک و راهنمایی دارید؟</h1>
+          <p class="text-slate-100">خدمات حرفه ای برای راه حل های نرم افزاری شما</p>
+        </div>
+
+        <div class="flex items-center justify-evenly py-4">
+          <button type="submit" class="text-slate-100 bg-transparent border-2 border-slate-100 hover:bg-indigo-800 rounded py-3 px-4 flex items-center transition duration-300 ease-in-out focus:outline-none focus-within:outline-none">
+            <span> شروع کنید </span>
+            <i class="fas fa-arrow-left mr-2 pt-1"></i>
+          </button>
+          <button type="submit" class="mr-6 text-slate-100 bg-transparent border-2 border-slate-100 hover:bg-indigo-800 rounded py-3 px-4 flex items-center transition duration-300 ease-in-out focus:outline-none focus-within:outline-none">
+            <span>بیشتر بدانید</span>
+            <i class="fas fa-arrow-left mr-2 pt-1"></i>
+          </button>
+        </div>
+
+      </div>
+      <!-- footer -->
+      <div class="text-right">
+        <div class="w-11/12 m-auto flex flex-wrap items-start justify-evenly md:justify-between">
+          <!-- 1 -->
+          <div class="w-12/12 sm:6/12 lg:3/12 px-2 py-6">
+            <a href="#" class="flex items-center md:order-1">
+              <span class="self-center text-3xl font-extrabold whitespace-nowrap font-lalezar hover:text-indigo-900 tracking-wider">slang</span>
+              <img src="./images/logo.png" class="h-8 mr-2 text-slate-100" alt="Flowbite Logo">
+            </a>
+            <p class="text-lg w-72 my-4">
+              لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله
+            </p>
+            <a href="#" class="text-lg hover:underline">بیشتر بخوانید</a>
+          </div>
+          <!-- 2 -->
+          <div class="w-12/12 sm:6/12 lg:3/12 px-2 py-6">
+            <h3 class="font-lalezar text-2xl text-slate-100">درباره ما</h3>
+            <ul class="text-bold list-none my-4">
+              <li class="mt-3"><a href="#" class="hover:underline">تاریخچه موفقیت</a></li>
+              <li class="mt-3"><a href="#" class="hover:underline">آخرین اخبار</a></li>
+              <li class="mt-3"><a href="#" class="hover:underline">به حرفه ای نیاز دارید؟</a></li>
+              <li class="mt-3"><a href="#" class="hover:underline">سرویس محبوب</a></li>
+            </ul>
+          </div>
+          <!-- 3 -->
+          <div class="w-12/12 sm:6/12 lg:3/12 px-2 py-6">
+            <h3 class="font-lalezar text-2xl text-slate-100">لینک های محبوب</h3>
+            <ul class="text-bold list-none my-4">
+              <li class="mt-3"><a href="#" class="hover:underline">راه حل های نرم افزاری</a></li>
+              <li class="mt-3"><a href="#" class="hover:underline">توسعه وب</a></li>
+              <li class="mt-3"><a href="#" class="hover:underline">طرح کاربری</a></li>
+              <li class="mt-3"><a href="#" class="hover:underline">بهینه سازی سئو</a></li>
+            </ul>
+          </div>
+          <!-- 4 -->
+          <div class="w-12/12 sm:6/12 lg:3/12 px-2 py-6">
+            <h3 class="font-lalezar text-2xl text-slate-100">درتماس باشید</h3>
+            <ul class="text-bold list-none my-4">
+              <li class="mt-3">
+                <a href="#" class="hover:underline">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>ایران،تهران،آزادی</span>
+                </a>
+              </li>
+              <li class="mt-3">
+                <a href="#" class="hover:underline">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span>ایران،تهران،آزادی</span>
+                </a>
+              </li>
+              <li class="mt-3">
+                <a href="#" class="hover:underline">
+                  <i class="fa-solid fa-phone"></i>
+                  <span class="font-bnazanin text-xl font-extrabold">0123456789</span>
+                </a>
+              </li>
+            </ul>
+            <!-- social icons -->
+            <div>
+              <a href="#" class="inline-block w-9 h-9 text-xl bg-white/[0.1] m-2 rounded-full hover:bg-indigo-600 text-center leading-[42px]"><i class="fa-brands fa-telegram"></i></a>
+              <a href="#" class="inline-block w-9 h-9 text-xl bg-white/[0.1] m-2 rounded-full hover:bg-indigo-600 text-center leading-[42px]"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#" class="inline-block w-9 h-9 text-xl bg-white/[0.1] m-2 rounded-full hover:bg-indigo-600 text-center leading-[42px]"><i class="fa-brands fa-github"></i></i></a>
+              <a href="#" class="inline-block w-9 h-9 text-xl bg-white/[0.1] m-2 rounded-full hover:bg-indigo-600 text-center leading-[42px]"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <hr class="w-10/12 my-6 m-auto">
+      </div>
+      <div class="py-8 text-center">
+        تمامی حقوق متعلق به شرکت slang است
+      </div>
+    </footer>
+    <!-- move to up button -->
+    <div
+      class="fixed text-slate-100 bottom-6 right-6 font-medium bg-indigo-700 border border-gray-300 rounded-full text-center flex items-center shadow-md shadow-indigo-400 z-20"
+    >
+      <a
+        href="#"
+        class="p-6 text-xl w-10 h-10 flex items-center justify-center"
+        type="button"
+      >
+        <i class="fa fa-angle-up"></i>
+      </a>
+    </div>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
